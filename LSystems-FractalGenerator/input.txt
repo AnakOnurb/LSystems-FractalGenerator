@@ -1,0 +1,4 @@
+iterations=4,angle=90
+startString=F
+F=F+F[F-F+F]
+G=F
