@@ -1,5 +1,7 @@
 package pack;
 
+import javax.swing.JOptionPane;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -23,16 +25,10 @@ public class Starter extends Application
 		btnRun.setText("Generate Image");
 		btnRun.setPrefSize(150, 30);
 		btnRun.setLayoutX(75);
-		btnRun.setLayoutY(5);
-		
-		TextArea expInput = new TextArea();
-		expInput.setPrefSize(300, 25);
-		expInput.setLayoutX(5);
-		expInput.setLayoutY(40);
+		btnRun.setLayoutY(25);
 		
 		Pane root = new Pane();
 		root.getChildren().add(btnRun);
-		root.getChildren().add(expInput);
 		
 		Scene scene = new Scene(root, 310, 80);
 		
@@ -46,6 +42,7 @@ public class Starter extends Application
 			public void handle(ActionEvent event)
 			{
 				Processor.start();
+				JOptionPane.showMessageDialog(null, "Arquivo criado!");
 			}
 		});
 	}
